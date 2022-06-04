@@ -154,6 +154,12 @@ section {
 	color: var(--black);
 	border: solid 2px #3e3e3e;
 	opacity: 1;
+	transition: 400ms !important;
+}
+
+.download-cv:hover {
+	border: solid 2px #454B66;
+	color: #454B66;
 }
 
 .home .content a:visited {
