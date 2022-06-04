@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 * {
-	font-family: "Roboto", sans-serif;
+	font-family: "Inter", sans-serif;
 	margin: 0;
 	padding: 0;
 	outline: none;
 	border: none;
 	box-sizing: border-box;
-	overflow: hidden;
+	/* overflow-x: hidden; */
 	text-decoration: none;
 	text-transform: capitalize;
 }
@@ -43,6 +44,8 @@ html {
 
 section {
 	padding: 5rem 9%;
+	overflow: hidden;
+	position: relative;
 }
 
 .btn {
@@ -85,7 +88,7 @@ section {
 
 .header .navbar a {
 	margin: 0 1.5rem;
-	font-size: 1.8rem;
+	font-size: 1.7rem;
 	color: var(--black);
 }
 
@@ -134,13 +137,25 @@ section {
 
 .home .content h3 {
 	font-size: 5rem;
-	font-weight: bolder;
+	font-weight: 600;
 	margin-bottom: 1rem;
 }
 
 .home .content p {
 	font-size: 3rem;
 	margin-bottom: 1rem;
+}
+
+.download-cv {
+	font-weight: 600;
+	background: var(--blue);
+	color: var(--black);
+}
+
+.home .content a:visited {
+	font-weight: 600;
+	background: var(--blue);
+	color: var(--black);
 }
 
 /* .home .content p {
@@ -168,11 +183,6 @@ section {
 	clip-path: polygon(0 80%, 100% 75%, 100% 100%, 0% 100%);
 }
 
-.download-cv {
-	background: var(--blue);
-	color: var(--black);
-}
-
 .heading {
 	text-align: center;
 	margin-bottom: 3rem;
@@ -180,6 +190,7 @@ section {
 
 .heading h1 {
 	font-size: 3.5rem;
+	font-weight: 600;
 }
 
 .about {
@@ -284,6 +295,10 @@ section {
 	padding: 1rem 0;
 	line-height: 2;
 	font-size: 1.7rem;
+}
+
+.projects .content i {
+	font-size: 2rem;
 }
 
 .certificates .box-container {
@@ -398,12 +413,12 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 5rem;
 	position: fixed;
 	bottom: 4rem;
 	right: 4rem;
 	width: 5rem;
 	height: 5rem;
+	font-size: 2.5rem;
 	background: var(--white);
 	border-radius: 20%;
 	border: var(--border);
