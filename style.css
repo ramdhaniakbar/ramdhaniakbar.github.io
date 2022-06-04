@@ -108,7 +108,7 @@ section {
 
 .home {
 	min-height: 25vh;
-	background: rgb(238, 238, 238);
+	background: #fbfbfb;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -147,15 +147,20 @@ section {
 }
 
 .download-cv {
+	margin-top: 30px;
+	padding: 15px 28px;
 	font-weight: 600;
-	background: var(--blue);
+	background: transparent;
 	color: var(--black);
+	border: solid 2px #3e3e3e;
+	opacity: 1;
 }
 
 .home .content a:visited {
 	font-weight: 600;
-	background: var(--blue);
-	color: var(--black);
+	background: transparent;
+	border: solid 2px #828282;
+	color: #828282;
 }
 
 /* .home .content p {
@@ -216,7 +221,7 @@ section {
 }
 
 .skills {
-	background: var(--blue);
+	background: #f5fcff;
 }
 
 .skills .box-container {
@@ -225,12 +230,12 @@ section {
 	gap: 1.5rem;
 }
 
-.box {
+.skills .box-container .box {
 	background: var(--white);
 	padding: 3rem 2rem;
 	text-align: center;
 	border-radius: 0.5rem;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 
 .box:hover {
@@ -382,13 +387,13 @@ section {
 }
 
 .footer {
-	background: var(--peach);
+	background: #fbfbfb;
 }
 
 .footer .box-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	border-bottom: 2px solid var(--white);
+	border-bottom: 2px solid #b9b9b9;
 	/* padding: 1.5rem 0.1rem; */
 	/* min-height: 5vh; */
 }
@@ -396,7 +401,8 @@ section {
 .footer .box-container .box {
 	text-align: start;
 	box-shadow: none;
-	background: var(--peach);
+	padding: 20px 40px;
+	background: transparent;
 }
 
 .footer .box-container .box h2 {
@@ -442,10 +448,13 @@ section {
 	padding: 0.5rem;
 	border: 1.5px solid var(--black);
 	border-radius: 50%;
+	background: #eceff1;
+	transition: 0.4s;
 }
 
 .icons i:hover {
-	background: var(--blue);
+	background: var(--black);
+	color: var(--white);
 }
 
 .text-footer {
@@ -602,12 +611,23 @@ section {
 	}
 }
 
-@media (max-width: 520px) {
+@media (max-width: 560px) {
 	.skills .box-container {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		gap: 1.5rem;
 	}
+
+	.footer .box-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0.1rem;
+	}
+
+	.footer .box-container .box {
+		padding: 10 40px;
+	}
+
 	.top:hover {
 		background: var(--white);
 	}
@@ -620,12 +640,6 @@ section {
 
 	.heading h1 {
 		font-size: 3rem;
-	}
-
-	.footer .box-container {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 0.1rem;
 	}
 
 	.top:hover {
