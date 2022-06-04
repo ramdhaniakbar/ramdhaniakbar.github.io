@@ -8,6 +8,7 @@
 	outline: none;
 	border: none;
 	box-sizing: border-box;
+	overflow-x: hidden;
 	text-decoration: none;
 	text-transform: capitalize;
 }
@@ -24,7 +25,6 @@
 
 html {
 	font-size: 62.5%;
-	overflow-x: hidden;
 	scroll-behavior: smooth;
 	scroll-padding-top: 7rem;
 }
