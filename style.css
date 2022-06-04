@@ -428,7 +428,7 @@ section {
 	transition: 600ms ease;
 }
 
-.top:hover {
+.top:active {
 	background: var(--blue);
 }
 
