@@ -54,7 +54,7 @@
 				<h3>
 					Hello<span class="hand-emoji">👋</span>, my name is Muhamad Ramdhani Akbar.
 				</h3>
-				<p>Student & Software Engineering</p>
+				<p></p>
 				<!-- <p>
 					I am a student majoring in Software Engineering from SMK Wikrama Bogor. I
 					have the ability to use the PHP programming language and the Laravel
@@ -398,6 +398,14 @@
 
 		<!-- custom js link -->
 		<script src="script.js"></script>
+
+		<!-- cdn gsap -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+		<script>
+			gsap.registerPlugin(TextPlugin);
+			gsap.to('.home .content p', {duration: 3, delay: 1, text: 'Student & Software Engineering'})
+		</script>
 
 		<!-- cdn js aos -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
