@@ -147,7 +147,7 @@ section {
 }
 
 .download-cv {
-	margin-top: 30px;
+	margin-top: 15px;
 	padding: 15px 28px;
 	font-weight: 600;
 	background: transparent;
@@ -158,8 +158,8 @@ section {
 }
 
 .download-cv:hover {
-	border: solid 2px #454B66;
-	color: #454B66;
+	border: solid 2px #454b66;
+	color: #454b66;
 }
 
 .home .content a:visited {
@@ -516,6 +516,11 @@ section {
 	.home .content h3 {
 		font-size: 4rem;
 	}
+
+	.download-cv {
+		padding: 12px 24px;
+		font-size: 1.7rem;
+	}
 }
 
 @media (max-width: 992px) {
@@ -602,6 +607,10 @@ section {
 
 	.image img {
 		width: 65%;
+	}
+
+	.download-cv {
+		padding: 10px 20px;
 	}
 
 	.about .box-container {
