@@ -66,6 +66,11 @@ section {
 	color: var(--black);
 }
 
+.btn:active {
+	color: #4c4f5a;
+	border: solid 2px #4c4f5a;
+}
+
 .header {
 	position: sticky;
 	top: 0;
