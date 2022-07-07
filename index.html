@@ -185,7 +185,7 @@
 						data-aos-offset="300"
 						data-aos-duration="500"
 					>
-						<img src="images/coming-soon.jpg" alt="" />
+						<img src="images/mini-game-tebak-angka.png" alt="" />
 					</div>
 					<div
 						class="content"
@@ -193,9 +193,9 @@
 						data-aos-offset="300"
 						data-aos-duration="500"
 					>
-						<h3>Guess My Number</h3>
-						<p>Coming Soon...</p>
-						<a href="#" class="btn btn-projects">Read More</a>
+						<h3>Tebak Angka</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio. Explicabo, delectus. A explicabo numquam recusandae maiores illo iusto excepturi, quibusdam ab saepe mollitia ex blanditiis? Commodi veritatis vitae omnis?</p>
+						<a href="https://game-tebak-angka.netlify.app" target="_blank" class="btn btn-projects">Demo</a>
 					</div>
 				</div>
 
@@ -302,40 +302,50 @@
 			</div>
 
 			<div class="box-container">
-				<form action="#" class="contact-form">
-					<div class="input-contact">
-						<label for="full-name" data-aos="fade-right">Full Name</label>
-						<input
-							type="text"
-							id="full-name"
-							placeholder="Gonalu Kaler"
-							name="full-name"
-							data-aos="fade-up"
-						/>
-					</div>
-					<div class="input-contact">
-						<label for="email" data-aos="fade-right">Email Address</label>
-						<input
-							type="email"
-							id="email"
-							placeholder="me@gmail.com"
-							name="email"
-							data-aos="fade-up"
-						/>
-					</div>
-					<div class="message-contact">
-						<label for="message" data-aos="fade-right">Message</label>
-						<textarea
-							name="message"
-							id="message"
-							cols="30"
-							rows="5"
-							placeholder="Whatever you want to type..."
-							data-aos="fade-up"
-						></textarea>
-					</div>
-				</form>
-				<button type="submit" name="send" id="send" class="btn" data-aos="zoom-in">Send</button>
+				<div class="contact-form">
+					<form name="submit-to-google-sheet">
+						<div class="input-contact">
+							<label for="name" data-aos="fade-right">Full Name</label>
+							<input
+								type="text"
+								id="name"
+								placeholder="Gonalu Kaler"
+								name="name"
+								data-aos="fade-up"
+							/>
+						</div>
+						<div class="input-contact">
+							<label for="email" data-aos="fade-right">Email Address</label>
+							<input
+								type="email"
+								id="email"
+								placeholder="me@gmail.com"
+								name="email"
+								data-aos="fade-up"
+							/>
+						</div>
+						<div class="message-contact">
+							<label for="message" data-aos="fade-right">Message</label>
+							<textarea
+								name="message"
+								id="message"
+								cols="30"
+								rows="5"
+								placeholder="Whatever you want to type..."
+								data-aos="fade-up"
+							></textarea>
+						</div>
+						<button
+							type="submit"
+							name="send"
+							id="send"
+							class="btn"
+							data-aos="zoom-in"
+						>
+							Send
+						</button>
+					</form>
+				</div>
 			</div>
 		</section>
 		<!-- contact section ends -->
@@ -404,13 +414,30 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
 		<script>
 			gsap.registerPlugin(TextPlugin);
-			gsap.to('.home .content p', {duration: 3.5, delay: 1, text: 'Student & Software Engineering'})
+			gsap.to(".home .content p", {
+				duration: 3.5,
+				delay: 1,
+				text: "Student & Software Engineering",
+			});
 		</script>
 
 		<!-- cdn js aos -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
-			AOS.init()
+			AOS.init();
+		</script>
+
+		<script>
+			const scriptURL =
+				"https://script.google.com/macros/s/AKfycbw0sxbJMTjyoDyIfuxM43uVCo9rxI2K7Fk3ezZAYP1vvA7ipZo_EqFf34CXy8iQ0nHr/exec";
+			const form = document.forms["submit-to-google-sheet"];
+
+			form.addEventListener("submit", (e) => {
+				e.preventDefault();
+				fetch(scriptURL, { method: "POST", body: new FormData(form) })
+					.then((response) => console.log("Success!", response))
+					.catch((error) => console.error("Error!", error.message));
+			});
 		</script>
 	</body>
 </html>
