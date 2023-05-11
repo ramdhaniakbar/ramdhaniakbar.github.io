@@ -215,14 +215,11 @@ section {
 }
 
 .about .box-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 5rem;
-	row-gap: 2rem;
+	padding: 0 4rem;
 }
 
 .about .box-container .box {
-	text-align: left;
+	text-align: center;
 	box-shadow: none;
 	padding: 0;
 }
