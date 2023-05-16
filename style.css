@@ -51,8 +51,8 @@ section {
 .btn {
 	display: inline-block;
 	margin-top: 1rem;
-	padding: 1rem 3rem;
-	font-size: 2rem;
+	padding: .7rem 1.5rem;
+	font-size: 1.7rem;
 	color: var(--white);
 	background: var(--black);
 	border: var(--border);
@@ -309,6 +309,13 @@ section {
 	padding: 1rem 0;
 	line-height: 2;
 	font-size: 1.7rem;
+}
+
+.projects .content .tech-stack {
+	padding: 1rem 0;
+	line-height: 2;
+	font-size: 1.7rem;
+	font-weight: 600;
 }
 
 .projects .content i {
